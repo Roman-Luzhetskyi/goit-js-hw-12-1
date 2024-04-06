@@ -4,8 +4,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-
-const gallery = document.querySelector('.js-gallery');
+const gallery = document.querySelector('.gallery');
 
 export function fetchGallery(data) {
   gallery.insertAdjacentHTML('beforeend', markupGallery(data));

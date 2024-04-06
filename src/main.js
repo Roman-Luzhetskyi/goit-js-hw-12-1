@@ -8,15 +8,15 @@ import {
 import { getGalleryData } from './js/pixabay-api';
 import { fetchGallery } from './js/render-functions';
 
-const form = document.querySelector('.js-search-form');
-const gallery = document.querySelector('.js-gallery');
-const loadMoreBtn = document.querySelector('.js-load-more-btn');
-
 let queryString = '';
 let currentPage = 1;
 let evtType = '';
 
 const IMAGE_MAX_COUNT = 15;
+
+const form = document.querySelector('.search-form');
+const gallery = document.querySelector('.gallery');
+const loadMoreBtn = document.querySelector('.load-more-btn');
 
 form.addEventListener('submit', onSubmitForm);
 

@@ -25,7 +25,7 @@ export async function getGalleryData(queryValue, page) {
   } catch (error) {
     if (error.response) {
       const { data } = error.response;
-      // The request was made, but the server responded with a non-200 status code
+      // The request was made, but the server responded with a non-2xx status code
       showInfoMessage(
         `${MESSAGES.exception} ERROR: ${data}`,
         MESSAGES_BG_COLORS.orange
