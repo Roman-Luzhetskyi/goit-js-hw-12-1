@@ -25,19 +25,17 @@ export async function getGalleryData(queryValue, page) {
   } catch (error) {
     if (error.response) {
       const { data } = error.response;
-      // The request was made, but the server responded with a non-2xx status code
+
       showInfoMessage(
         `${MESSAGES.exception} ERROR: ${data}`,
         MESSAGES_BG_COLORS.orange
       );
     } else if (error.request) {
-      // The request was made, but no response was received
       showInfoMessage(
         `${MESSAGES.exception} ERROR: ${error.request}`,
         MESSAGES_BG_COLORS.orange
       );
     } else {
-      // Something happened in setting up the request that triggered an Error
       showInfoMessage(
         `${MESSAGES.exception} ERROR: ${error.message}`,
         MESSAGES_BG_COLORS.orange
